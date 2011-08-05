@@ -1,0 +1,32 @@
+{
+	"name": "JQuery Injector",
+	"version": "1.0",
+	"description": "Inject JQuery into current page",
+	"permissions": [
+		"http://*/*",
+		"https://*/*",
+		"tabs"
+	],
+	"page_action": {
+		"default_title": "JQuery Injector",
+		"default_icon": "img/jquery16.png"
+	},
+	"icons": {
+		"128": "img/jquery128.png",
+		"16": "img/jquery16.png",
+		"48": "img/jquery48.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"js": [
+				"lib/jquery-1.6.2.min.js",
+				"content_script.js"
+			]
+		}
+	],
+	"background_page": "background.html"
+}
